@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '@/context/AuthContext'
-import { SkewerIcon } from '@/components/SkewerIcon'
+import { BrandLogo } from '@/components/BrandLogo'
 import { Lock, Mail, AlertCircle, Loader2, ArrowRight } from 'lucide-react'
 
 export default function Login() {
@@ -49,13 +49,13 @@ export default function Login() {
       <div className="w-full max-w-md">
         {/* Brand header */}
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="w-16 h-16 rounded-2xl bg-[#FCE9E4] flex items-center justify-center mb-4 shadow-sm border border-[#E7E1DA]">
-            <SkewerIcon className="w-10 h-10" />
+          <div className="mb-3">
+            <BrandLogo variant="full" className="max-w-[200px]" />
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-[#2A2420] tracking-tight">
-            Central Espetinhos
-          </h1>
-          <p className="text-sm text-[#7A716A] mt-1">Sistema de Gestão e Operações B2B</p>
+          <h1 className="sr-only">Central Espetinhos</h1>
+          <p className="text-sm font-medium text-[#7A716A] mt-2">
+            Sistema de Gestão e Operações B2B
+          </p>
         </div>
 
         {/* Card */}

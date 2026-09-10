@@ -16,7 +16,7 @@ import pb from '@/lib/pocketbase/client'
 import { useRealtime } from '@/hooks/use-realtime'
 import { formatCurrency, formatDate } from '@/lib/formatters'
 import { OrderStatusBadge } from '@/components/StatusBadges'
-import { SkewerIcon } from '@/components/SkewerIcon'
+import { BrandLogo } from '@/components/BrandLogo'
 import type { Order, Client } from '@/types'
 
 export default function Index() {
@@ -198,8 +198,8 @@ export default function Index() {
         {recentOrders.length === 0 && !loading ? (
           /* Empty state */
           <div className="py-14 px-4 flex flex-col items-center justify-center text-center">
-            <div className="w-16 h-16 rounded-2xl bg-[#FCE9E4] flex items-center justify-center mb-4 border border-[#E7E1DA]">
-              <SkewerIcon className="w-10 h-10" />
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+              <BrandLogo variant="mark" className="w-14 h-14" />
             </div>
             <h3 className="text-lg font-bold text-[#2A2420]">Nenhum pedido registrado ainda</h3>
             <p className="text-sm text-[#7A716A] max-w-sm mt-1 mb-6">

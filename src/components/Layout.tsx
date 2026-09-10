@@ -11,7 +11,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { useAuth } from '@/context/AuthContext'
-import { SkewerIcon } from '@/components/SkewerIcon'
+import { BrandLogo } from '@/components/BrandLogo'
 import { cn } from '@/lib/utils'
 
 export default function Layout() {
@@ -44,14 +44,12 @@ export default function Layout() {
       {/* Mobile Topbar */}
       <header className="lg:hidden sticky top-0 z-40 bg-white border-b border-[#E7E1DA] px-4 h-14 flex items-center justify-between shadow-xs">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-[#FCE9E4] flex items-center justify-center">
-            <SkewerIcon className="w-5 h-5" />
-          </div>
+          <BrandLogo variant="mark" className="w-9 h-9" />
           <div>
-            <span className="font-bold text-base text-[#2A2420] tracking-tight">
+            <span className="font-bold text-base text-[#2A2420] tracking-tight leading-tight block">
               Central Espetinhos
             </span>
-            <span className="text-[10px] block text-[#7A716A] -mt-1 font-medium">Gestão B2B</span>
+            <span className="text-[10px] block text-[#7A716A] -mt-0.5 font-medium">Gestão B2B</span>
           </div>
         </div>
         <button
@@ -77,11 +75,11 @@ export default function Layout() {
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-[#E7E1DA]">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[#FCE9E4] flex items-center justify-center">
-                    <SkewerIcon className="w-6 h-6" />
-                  </div>
+                  <BrandLogo variant="mark" className="w-10 h-10 shrink-0" />
                   <div>
-                    <h1 className="font-bold text-base text-[#2A2420]">Central Espetinhos</h1>
+                    <h1 className="font-bold text-base text-[#2A2420] leading-tight">
+                      Central Espetinhos
+                    </h1>
                     <p className="text-xs text-[#7A716A]">Operação & Distribuição</p>
                   </div>
                 </div>
@@ -150,14 +148,12 @@ export default function Layout() {
         <div>
           {/* Brand */}
           <div className="flex items-center gap-3 pb-6 border-b border-[#E7E1DA]">
-            <div className="w-10 h-10 rounded-xl bg-[#FCE9E4] flex items-center justify-center shrink-0 shadow-2xs">
-              <SkewerIcon className="w-6 h-6" />
-            </div>
-            <div>
-              <h1 className="font-bold text-base leading-tight text-[#2A2420]">
-                Central Espetinhos
+            <BrandLogo variant="mark" className="w-11 h-11 shrink-0" />
+            <div className="min-w-0">
+              <h1 className="font-bold text-sm tracking-wide text-[#2A2420] leading-tight truncate">
+                CENTRAL ESPETINHOS
               </h1>
-              <p className="text-[11px] font-medium text-[#7A716A] uppercase tracking-wider">
+              <p className="text-[10px] font-semibold text-[#8C6207] uppercase tracking-wider mt-0.5">
                 Gestão B2B
               </p>
             </div>
